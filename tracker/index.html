@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,hebrew,latin-ext" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="wrapper">
+    <section class="logo-block">
+        <img src="img/logo.svg" alt="">
+        <div class="logo-block__text">
+            <p class="logo-block__text__name">Блогеры Инстаграма v2.4</p>
+            <p class="logo-block__text__id-name">@easyprbot</p>
+        </div>
+    </section>
+    <nav class="menu-block">
+        <ul class="menu">
+            <li><a href="#">Мой трекер</a></li>
+            <li><a href="#">Мой отзыв</a></li>
+            <li><a href="#">Оставить отзыв</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+<nav class="tracker-navigation">
+    <section class="left-block">
+        <h1>Мой трекер</h1>
+        <div class="counter">9999</div>
+        <a class="btn-search btn" href="#"><input type="image" src="img/img-search.svg" /></a>
+        <a class="btn-list btn" href="#"><input type="image" src="img/img-list.svg" /></a>
+        <a class="btn-history btn" href="#"><input type="image" src="img/img-history.svg" /></a>
+        <p><img src="img/calc.svg" alt=""><a class="btn-calc" href="#">Калькулятор подписчиков </a></p>
+    </section>
+    <section class="right-block_name">
+
+    </section>
+</nav>
+<aside>
+    <section class="right-block">
+        <form action="#">
+            <label for="first_name">Блогер</label>
+            <input class="form form-top" id="first_name" type="text" placeholder="Введите ник блогера">
+            <label for="frt" >Цена за подписчика в ₽</label>
+            <div class="wrapper-double-form">
+               <input class="form double-form" id="frt" type="number" max="49" min="1"  placeholder="от 1">
+               <input class="form double-form double-form-one" type="number" max="50" min="1"  placeholder="до 50">
+            </div>
+        </form>
+    </section>
+    <section class="">
+        <form action="#">
+            <label for="qwe">Пришло подписчиков</label>
+            <div class="wrapper-double-form form-top">
+                <input class="form double-form" id="qwe" type="number" max="999999" min="500"  placeholder="от 500">
+                <input class="form double-form double-form-one" type="number" max="999999" min="0"  placeholder="до 999 999">
+            </div>
+                <label for="asd" >Цены из отзывов в ₽</label>
+            <div class="wrapper-double-form">
+                <input class="form double-form" id="asd" type="number" max="300" min="0"  placeholder="от 300">
+                <input class="form double-form double-form-one" type="number" max="999999" min="300"  placeholder="до 999 999">
+            </div>
+        </form>
+    </section>
+    <section class="">
+        <form action="#">
+            <label for="zxc" >Всего отзывов</label>
+            <div class="wrapper-double-form form-top">
+               <input class="form double-form" id="zxc" type="number" max="999" min="1"  placeholder="от 1">
+               <input class="form double-form double-form-one" type="number" max="999" min="1"  placeholder="до 999">
+            </div>
+            <label for="range" >Средняя оценка от 5</label>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="range">
+            </div>
+
+        </form>
+    </section>
+    <section class="">
+        <form action="#">
+            <label for="month">Отзывы за период</label>
+            <input class="form-top" id="month" type="text" placeholder="1 месяц">
+            <label>Показать отзывы от</label>
+            <div class="wrapper-checkbox">
+                <input id="cb1" type="checkbox" checked><label for="cb1">Блогеров</label>
+                <input id="cb2" type="checkbox" checked><label for="cb2">Коммерции</label>
+            </div>
+        </form>
+    </section>
+    <section class="">
+        <form class="form-button" action="#">
+            <button id="form-button-first">Найти</button>
+            <button>Сбросить</button>
+        </form>
+    </section>
+</aside>
+
+<main>
+    <div class="main-header">
+        <div class="header-left">
+           <h2>Поиск блогеров</h2>
+           <p id="main-p">В таблице показаны блогеры с отзывами за последний месяц</p>
+        </div>
+        <p><a href="#">Скачать отчет .xls</a></p>
+    </div>
+    <table>
+        <tr class="tabel-header row-white">
+            <td>Блогер</td>
+            <td>Прошлые цены<br>за подписчика</td>
+            <td>Пришло<br>подписчиков</td>
+            <td>Цены из отзывов</td>
+            <td>Всего<br>отзывов</td>
+            <td>Средняя<br>оценка</td>
+            <td>В мой<br>список</td>
+            <td>Скрыть<br>на месяц</td>
+            <td>Удалить<br>навсегда</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td >999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white table-row">
+            <td class="table-row_left" colspan="8"><p><a href="#">hanna.rachina</a> удален</p></td>
+            <td class="table-row_right"><a href="#">Отменить</a></td>
+        </tr>
+        <tr class="row-gray table-row">
+            <td class="table-row_left" colspan="8"><p><a href="#">nastasia.guba</a> скрыт на месяц</p></td>
+            <td class="table-row_right"><a href="#">Отменить</a></td>
+        </tr>
+        <tr class="row-white table-row" >
+            <td class="table-row_left" colspan="8"><p><a href="#">anastasi_li</a> добавлен в список ваших блогеров</p></td>
+            <td class="table-row_right"><a href="#">Отменить</a></td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td >999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td >999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td >999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-white">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr class="row-gray">
+            <td class="tabel-sidebar">neotpuskaiteplo</td>
+            <td>1,5 — 3 ₽</td>
+            <td>400 — 1 800</td>
+            <td>300 — 1 500 ₽</td>
+            <td class="tabel-central">999 показать</td>
+            <td>8,4 </td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <td class="show-more" colspan="9"><a href="#">Показать ещё</a></td>
+        </tr>
+    </table>
+</main>
+<footer>
+    <p><a href="#">Написать в тех поддержку</a></p>
+    <p><a href="#">Пользовательское соглашение</a></p>
+</footer>
+</body>
+</html>
