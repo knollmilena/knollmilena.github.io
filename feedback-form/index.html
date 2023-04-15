@@ -10,41 +10,43 @@
     <title>Document</title>
   </head>
   <body class="bg-secondary">
-    <form name="feedback" id="form">
-      <ul class="form-list">
-        <h1>Форма обратной связи</h1>
-        <li>
-          <label>Ваше имя:</label>
+    <main class="container">
+      <form class="form" name="feedback" id="form">
+        <ul class="form__list">
+          <h1 class="form__title">Форма обратной связи</h1>
+          <li class="form__item">
+            <label class="form__text">Ваше имя:</label>
 
-          <input class="input input-mail form-control" type="text" name="name" id="name" placeholder="Илон Маск" />
+            <input class="input" type="text" name="name" id="name" placeholder="Илон Маск" />
 
-          <span class="error"></span>
-        </li>
-        <li>
-          <label>Электронная почта:</label>
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <label class="form__text">Электронная почта:</label>
 
-          <input class="input input-mail form-control" type="email" name="email" id="email" placeholder="elon@musk.com" />
+            <input class="input input__mail" type="email" name="email" id="email" placeholder="elon@musk.com" />
 
-          <span class="error"></span>
-        </li>
-        <li>
-          <label>Тема сообщения:</label>
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <label class="form__text">Тема сообщения:</label>
 
-          <input class="input input-mail form-control" type="text" name="subject" maxlength="50" value="" />
+            <input class="input" type="text" name="subject" maxlength="50" value="" />
 
-          <span class="error"></span>
-        </li>
-        <li>
-          <label>Текст сообщения:</label>
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <label class="form__text">Текст сообщения:</label>
 
-          <textarea class="input input-mail form-control" name="textmess"></textarea>
+            <textarea class="input form__message" name="textmess"></textarea>
 
-          <span class="error"></span>
-        </li>
-        <li>
-          <button id="send_mess">отправить сообщение</button>
-        </li>
-      </ul>
-    </form>
+            <span class="error"></span>
+          </li>
+          <li class="form__item">
+            <button class="form__button" id="send_mess">отправить</button>
+          </li>
+        </ul>
+      </form>
+    </main>
   </body>
 </html>
