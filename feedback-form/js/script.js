@@ -23,20 +23,33 @@ function validation(form) {
 
 }
 
- function deleteValue(form){
+
+
+inputs.forEach(input => input.addEventListener('input', function(){
+  // input.classList.remove('input-error');
+  // input.classList.add('input');
+  if(input.value == ""){
+    input.classList.add('input-error');
+    input.classList.remove('input');
+    console.log('Пустое поле');
+    result = false;
+  } else {
+    input.classList.remove('input-error');
+    input.classList.add('input');
+
+}}))
+
+
+function deleteValue(form){
   inputs.forEach(input => {
     if(input.value !== ""){
       input.value = "";
+      input.classList.remove('input-error');
+      input.classList.add('input');
     }
  })
 }
 
-inputs.forEach(input => input.addEventListener('change', function(){
-  input.classList.remove('input-error');
-  input.classList.add('input');
-})
-
-)
 // inputs.addEventListener('change', function(){
 //   inputs.forEach(input => {
 //     input.classList.remove('input-error');
