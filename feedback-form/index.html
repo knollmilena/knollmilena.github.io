@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-secondary">
+    <form name="feedback" id="form">
+      <ul class="form-list">
+        <h1>Форма обратной связи</h1>
+        <li>
+          <label>Ваше имя:</label>
+
+          <input class="input input-mail form-control" type="text" name="name" id="name" placeholder="Илон Маск" />
+
+          <span class="error"></span>
+        </li>
+        <li>
+          <label>Электронная почта:</label>
+
+          <input class="input input-mail form-control" type="email" name="email" id="email" placeholder="elon@musk.com" />
+
+          <span class="error"></span>
+        </li>
+        <li>
+          <label>Тема сообщения:</label>
+
+          <input class="input input-mail form-control" type="text" name="subject" maxlength="50" value="" />
+
+          <span class="error"></span>
+        </li>
+        <li>
+          <label>Текст сообщения:</label>
+
+          <textarea class="input input-mail form-control" name="textmess"></textarea>
+
+          <span class="error"></span>
+        </li>
+        <li>
+          <button id="send_mess">отправить сообщение</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #414344;
+}
+form {
+  max-width: 960px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-list {
+  max-width: 800px;
+}
+.form-list li {
+  display: flex;
+  position: relative;
+}
+.form-list li + li {
+  margin-top: 24px;
+}
+.form-list label {
+  width: 192px;
+  flex-shrink: 0;
+  text-align: right;
+  padding: 0 24px 0 0;
+}
+.form-list label + div {
+  width: calc(100% - 192px);
+}
+.form-list button {
+  font-size: 12px;
+  line-height: 38px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 24px;
+  border: none;
+  border-radius: 5px;
+  background: #058cd0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-list li:last-child {
+  display: flex;
+  justify-content: center;
+}
+.form-list button:hover {
+  background: #0497e0;
+}
+.input {
+  width: 100%;
+  max-width: 400px;
+  height: 36px;
+  font-size: 15px;
+  line-height: 36px;
+  padding: 0 10px;
+  border: solid 1px #c6c6c6;
+  border-radius: 3px;
+  background: #fff;
+}
+.input:focus {
+  outline: none;
+  color: #3c464e;
+  border: solid 1px #82b0d5;
+  box-shadow: 0 0 9px rgba(23, 198, 254, 0.37), inset 0 1px 2px rgba(91, 114, 132, 0.3);
+}
+
+.input-error {
+  width: 100%;
+  max-width: 400px;
+  height: 36px;
+  font-size: 15px;
+  line-height: 36px;
+  padding: 0 10px;
+  border-radius: 3px;
+  outline: none;
+  color: #4e3c3c;
+  border: solid 1px #d58282;
+}
+
+.input-error:focus {
+  box-shadow: 0 0 9px rgba(254, 23, 23, 0.37), inset 0 1px 2px rgba(91, 114, 132, 0.3);
+}
+
+button:focus {
+  outline: none;
+  border: solid 1px #82b0d5;
+  box-shadow: 0 0 9px rgba(23, 198, 254, 0.37), inset 0 1px 2px rgba(91, 114, 132, 0.3);
+}
+textarea.input {
+  max-width: 400px;
+  padding: 8px 10px;
+  height: 156px;
+  display: block;
+  font: normal 15px/20px Roboto, Verdana, sans-serif;
+  resize: none;
+}
+textarea.input-error {
+  max-width: 400px;
+  padding: 8px 10px;
+  height: 156px;
+}
+
+.error {
+  max-width: 260px;
+  display: none;
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+  position: absolute;
+  left: 216px;
+  top: calc(100% + 8px);
+  z-index: 100;
+  padding: 6px 10px 7px;
+  border-radius: 6px;
+  background: #d24a4a;
+}
+.error:before {
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: -7px;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid #d24a4a;
+}
+.form-control_error {
+  border-color: #d24a4a;
+}
