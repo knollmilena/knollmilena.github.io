@@ -30,12 +30,19 @@ function validation(form) {
     }
  })
 }
-form.addEventListener('change', function(){
-  inputs.forEach(input => {
-    input.classList.remove('input-error');
-    input.classList.add('input');
-  })
+
+inputs.forEach(input => input.addEventListener('change', function(){
+  input.classList.remove('input-error');
+  input.classList.add('input');
 })
+
+)
+// inputs.addEventListener('change', function(){
+//   inputs.forEach(input => {
+//     input.classList.remove('input-error');
+//     input.classList.add('input');
+//   })
+// })
 form.addEventListener('submit', function(event){
   event.preventDefault();
 
