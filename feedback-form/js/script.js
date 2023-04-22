@@ -22,14 +22,11 @@ inputs.forEach(input => input.addEventListener('input', function(){
 
 form.addEventListener('submit', function(event){
   event.preventDefault();
-  inputs.forEach(input => input){
-    validation(input);
-  }
-  if (validation() == true) {
-    alert('Отправено!');
-  } else {
-    alert('Заполните все поля!');
-  }
-  validation();
-})
+  inputs.forEach(input => validation(input));
+  if (result == true) {
+      alert('Отправено!');
+    } else {
+      alert('Заполните все поля!');
+    }
+  });
 
