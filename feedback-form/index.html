@@ -29,11 +29,17 @@
           </li>
           <li class="form__item">
             <label class="form__text">Тема сообщения:</label>
-
-            <input class="input" type="text" name="subject" maxlength="50" value="" />
-
+            <select class="form__theme input" name="form__theme">
+              <option class="form__theme__item forn__theme-technical-question" value="1">Технический вопрос</option>
+              <option class="form__theme__item form__theme-problem-order" value="2">Проблема с заказом</option>
+              <option class="form__theme__item form__theme-other" value="Другое">Другое</option>
+            </select>
             <span class="error"></span>
           </li>
+          <!-- <li class="form__item">
+            <label class="form__text">Укажите свою тему:</label>
+            <input class="input input__theme" type="text" placeholder="Расскажите подробнее"  />
+          </li> -->
           <li class="form__item">
             <label class="form__text">Текст сообщения:</label>
 

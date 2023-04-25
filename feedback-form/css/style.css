@@ -147,6 +147,10 @@ body {
   border-color: #d24a4a;
 } */
 
+.form__theme {
+  color: #414344;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 300px;
